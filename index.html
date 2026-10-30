@@ -277,6 +277,13 @@
     padding:14px 24px; border-radius:999px; transition:background .18s ease;
   }
   .letter-form button:hover{background:var(--bronze-bright)}
+  .letter-form a.substack-subscribe{
+    display:block; text-align:center; text-decoration:none;
+    background:var(--bronze); color:#14100a; border:1px solid var(--bronze); cursor:pointer;
+    font-family:"Source Sans 3", system-ui, sans-serif; font-weight:700; font-size:15px;
+    padding:14px 24px; border-radius:999px; transition:background .18s ease;
+  }
+  .letter-form a.substack-subscribe:hover{background:var(--bronze-bright)}
   @media (max-width:480px){ .letter-form .row{flex-direction:column} .letter-form button{width:100%} }
   .letter-note{margin:0; font-family:"Source Sans 3", system-ui, sans-serif; font-size:13.5px; color:var(--muted)}
   .mascot{margin:24px 0 0; display:flex; gap:16px; align-items:center}
@@ -572,15 +579,10 @@
           <figcaption>Aethelwis, resident scholar and keeper of the mailing list.</figcaption>
         </figure>
       </div>
-      <!-- TODO: confirm Buttondown username — the endpoint below uses the placeholder username "medievalrhetor"; correct it once the account username is confirmed. -->
-      <form class="letter-form" action="https://buttondown.com/api/emails/embed-subscribe/medievalrhetor" method="post" target="_blank">
-        <div class="row">
-          <label class="sr-only" for="letter-email">Email address</label>
-          <input id="letter-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
-          <button type="submit">Subscribe</button>
-        </div>
-        <p class="letter-note">Delivered by Buttondown. One letter, now and then — never a flood.</p>
-      </form>
+      <div class="letter-form">
+        <a class="substack-subscribe" href="https://medievalrhetor.substack.com" target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+        <p class="letter-note">The Medieval Rhetor, delivered by Substack. One letter, now and then — never a flood.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -595,6 +597,9 @@
     </div>
 
     <div class="platforms">
+      <a class="platform reveal" href="https://medievalrhetor.substack.com" target="_blank" rel="noopener noreferrer">
+        <span><span class="name">Substack</span><span class="what">The weekly letter · @medievalrhetor</span></span><span class="arrow" aria-hidden="true">→</span>
+      </a>
       <a class="platform reveal" href="https://www.youtube.com/@stevensams1919" target="_blank" rel="noopener noreferrer">
         <span><span class="name">YouTube</span><span class="what">Video lessons · @stevensams1919</span></span><span class="arrow" aria-hidden="true">→</span>
       </a>
