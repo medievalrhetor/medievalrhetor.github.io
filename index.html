@@ -148,6 +148,17 @@
   @media (max-width:860px){ .purpose-grid{grid-template-columns:1fr} }
   .purpose-lede{font-size:clamp(21px, 2.4vw, 25px); line-height:1.55; margin:0 0 18px}
   .purpose-body{color:var(--parchment-dim); margin:0}
+
+  /* panegyrics */
+  .panegyrics-viewport{overflow:hidden; margin-top:6px; -webkit-mask-image:linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image:linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent)}
+  .panegyrics-track{display:flex; width:max-content; animation:panegyrics-scroll 55s linear infinite}
+  .panegyrics-viewport:hover .panegyrics-track{animation-play-state:paused}
+  @keyframes panegyrics-scroll{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+  .panegyrics-group{display:flex; gap:22px; padding-right:22px}
+  .panegyric{flex:0 0 auto; width:min(430px, 82vw); background:var(--panel); border:1px solid var(--line-soft); border-radius:var(--radius); padding:24px 26px; margin:0}
+  .panegyric blockquote{margin:0 0 14px; font-size:20px; line-height:1.55; font-style:italic; color:var(--parchment)}
+  .panegyric figcaption{font-family:"Source Sans 3", system-ui, sans-serif; font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--bronze-bright); font-weight:700}
+  @media (prefers-reduced-motion: reduce){ .panegyrics-track{animation:none} .panegyrics-viewport{overflow-x:auto} }
   .exegesis{margin-top:38px}
   .exegesis h3{
     font-family:"Cinzel", serif; font-weight:700;
@@ -511,6 +522,41 @@
           <li><span><b>Based in</b> — Atlanta</span></li>
         </ul>
       </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PANEGYRICS -->
+<section id="panegyrics">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">From the audience</p>
+      <h2>Panegyrics</h2>
+      <p>The Purpose, answered in the readers' own words.</p>
+    </div>
+  </div>
+  <div class="panegyrics-viewport" aria-label="Praise from readers">
+    <div class="panegyrics-track">
+      <div class="panegyrics-group">
+        <figure class="panegyric">
+          <blockquote>Thank you for doing this. It adds so much human and historical context to our current situation. It's also fun. Reminds me it's good to look beyond our own small moment in history.</blockquote>
+          <figcaption>Threads, November 5, 2026</figcaption>
+        </figure>
+        <figure class="panegyric">
+          <blockquote>Wait! Thank you! You are another bit of serendipity, of bringing things together, and allowing for big and little revelations. As I often say: I love it when a plan comes together.</blockquote>
+          <figcaption>Threads, November 5, 2026</figcaption>
+        </figure>
+      </div>
+      <div class="panegyrics-group" aria-hidden="true">
+        <figure class="panegyric">
+          <blockquote>Thank you for doing this. It adds so much human and historical context to our current situation. It's also fun. Reminds me it's good to look beyond our own small moment in history.</blockquote>
+          <figcaption>Threads, November 5, 2026</figcaption>
+        </figure>
+        <figure class="panegyric">
+          <blockquote>Wait! Thank you! You are another bit of serendipity, of bringing things together, and allowing for big and little revelations. As I often say: I love it when a plan comes together.</blockquote>
+          <figcaption>Threads, November 5, 2026</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
