@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://medievalrhetor.github.io/sitemap.xml
